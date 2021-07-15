@@ -426,6 +426,7 @@ header .navbar {
 
 .blog-posts .down-content {
 	padding: 40px;
+	padding-top: 0px !important;
 	border-right: 1px solid #eee;
 	border-left: 1px solid #eee;
 	border-bottom: 1px solid #eee;
@@ -817,7 +818,7 @@ footer {
 	margin-top: 100px;
 	text-align: center;
 	background-color: #20232e;
-	padding: 60px 0px;
+	padding: 10px 0px;
 }
 
 footer ul.social-icons {

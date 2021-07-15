@@ -189,7 +189,7 @@
     </div>
   </div>
 </section>
-
+<!-- 
 <section class="call-to-action">
   <div class="container">
     <div class="row">
@@ -209,7 +209,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <section class="blog-posts grid-system">
   <div class="container">
@@ -220,6 +220,8 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
+            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/forkliftkom2.jpg" alt="">
+          
             </div>
             <div class="down-content">
               <p>Kamal Muara dan sekitarnya</p>
@@ -231,6 +233,9 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
+              
+            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/forkliftkom2.jpg" alt="">
+          
             </div>
             <div class="down-content">  
               <p>Kapuk dan Sekitarnya</p>
@@ -261,48 +266,60 @@
         <h2 class="text-center">About Us</h2>
       <br>
       <br>
-      <div class="content">
-        <ul>
-          <li>
-            <div class="author-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/comment-author-01.jpg" alt="">
-            </div>
-            <div class="right-content">
-              <h4>John Doe<span>10.07.2020</span></h4>
-              <p>Fusce ornare mollis eros. Duis et diam vitae justo fringilla condimentum eu quis leo. Vestibulum id turpis porttitor sapien facilisis scelerisque. Curabitur a nisl eu lacus convallis eleifend posuere id tellus.</p>
-            </div>
-          </li>
-          <li>
-            <div class="author-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/comment-author-02.jpg" alt="">
-            </div>
-            <div class="right-content">
-              <h4>Jane Smith<span>10.07.2020</span></h4>
-              <p>Nullam nec pharetra nibh. Cras tortor nulla, faucibus id tincidunt in, ultrices eget ligula. Sed vitae suscipit ligula. Vestibulum id turpis volutpat, lobortis turpis ac, molestie nibh.</p>
-            </div>
-          </li>
-          <li>
-            <div class="author-thumb">
-              <img src="<?= base_url('assets/assets_shop') ?>/images/comment-author-03.jpg" alt="">
-            </div>
-            <div class="right-content">
-              <h4>Kate Blue<span>10.07.2020</span></h4>
-              <p>Nullam nec pharetra nibh. Cras tortor nulla, faucibus id tincidunt in, ultrices eget ligula. Sed vitae suscipit ligula. Vestibulum id turpis volutpat, lobortis turpis ac, molestie nibh.</p>
-            </div>
-          </li>
-        </ul>
+      <div class="content"> 
+        <div class="row">
+          <div class="col-md-4 col-sm-4">
+          <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/forkliftkom2.jpg" alt="">
+          </div>
+          <div class="col-md-8 col-sm-8">
+            <h4>CV. Alie Mitra Utama</h4>
+            <h5>Jl. Kapuk Kamal rawa melati Rt.003/01, Tegal Alur, jakarta Barat, Jakarta</h5>
+            <hr>
+            <h5>Visi</h5>
+            <p>Menjadi perusahaan rental Alat berat terbaik di Indonesia</p>
+            <hr>
+            <h5>Misi</h5>
+            <p>(-) Memberikan Pelayanan terbaik bagi para Konsumen 
+            </p>
+            <p> 
+                (-) Menjamin keselamatan kerja para karyawan
+                 
+            </p>
+            <p> 
+                (-) Menghadirkan Lapangan Pekerjaan yang Produktif bagi para karyawan CV. Alie Mitra Utama
+            </p>
+            <hr>
+            <!-- <h5>Tipe Forklift dan Harga</h5>
+            <p> 
+        (-) Forklift Komatsu 1,5 ton 175/jam
+        
+        </p>
+            <p> (-) Forklift TCM 3 Ton 300k/jam
+            </p>
+            <p> (-) Forklift Komatsu 3,5 Ton 350/jam 
+            </p>
+            <p>  (-) Forklift TCM 7 Ton 500k/jam
+            </p>
+            <p>  (-) Forklift TCM 10 TOn 750k/jam
+            </p>
+            <hr> -->
+              <p> 
+              Telp : 089602693947 / No Rek BCA : 6040483380
+              </p> 
+          </div>
+        </div> 
       </div>
 
       <br>
-      <br>
+      <!-- <br> -->
     
-      <div class="row justify-content-md-center">
+      <!-- <div class="row justify-content-md-center">
         <div class="col-md-3">
           <div class="main-button">
             <a href="testimonials.html">Read More</a>
           </div>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>

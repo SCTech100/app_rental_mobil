@@ -36,14 +36,18 @@ class Rental extends CI_Controller{
     $id_customer     = $this->session->userdata('id_customer');
     $id_mobil        = $this->input->post('id_mobil');
     $tgl_rental      = $this->input->post('tgl_rental');
-    $tgl_kembali     = $this->input->post('tgl_kembali');
-    $denda           = $this->input->post('denda');
+    $jam_rental           = $this->input->post('jam_rental');
+    $lama_sewa           = $this->input->post('lama_sewa');
     $harga           = $this->input->post('harga');
+    $tgl_kembali     = $this->input->post('tgl_kembali');
+    $denda           = $this->input->post('denda'); 
 
     $data = array(
       'id_customer'          => $id_customer,
       'id_mobil'             => $id_mobil,
       'tgl_rental'           => $tgl_rental,
+      'jam_rental'           => $jam_rental,
+      'lama_sewa'           => $lama_sewa,
       'tgl_kembali'          => $tgl_kembali,
       'denda'                => $denda,
       'harga'                => $harga,

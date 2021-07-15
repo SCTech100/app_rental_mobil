@@ -12,8 +12,8 @@
           <div class="col-lg-12">
             <div class="copyright-text">
               <p>
-                Copyright © 2020 Company Name
-                | Template by: <a href="https://www.phpjabbers.com/">PHPJabbers.com</a>
+                Copyright © 2021 CV. Alie Mitra Utama
+                | Developer: Steven M.S 
               </p>
             </div>
           </div>

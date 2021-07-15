@@ -16,17 +16,17 @@
           <label for="">denda/jam</label>
           <input type="text" name="denda" class="form-control" value="<?= $dt->denda; ?>" readonly>
         </div> -->
-        <!-- <div class="form-group">
-          <label for="">Tanggal Rental</label>
-          <input type="date" name="tgl_rental" class="form-control">
-        </div> -->
+        <div class="form-group">
+          <label for="">Tanggal Sewa</label>
+          <input type="date" name="tgl_rental" class="form-control" style="width: 200px">
+        </div>
         <div class="form-group">
           <label for="">Jam Sewa</label>
-          <input type="text" name="jamsewa" class="form-control" value="<?= $dt->denda; ?>" readonly>
+          <input type="time" name="jam_rental" class="form-control" style="width: 200px" >
         </div>
         <div class="form-group">
           <label for="">Lama Sewa</label>
-          <input type="text" name="lamasewa" class="form-control" value="<?= $dt->denda; ?>" readonly>
+          <input type="number" name="lama_sewa" class="form-control" style="width: 200px" min="1" max="90" >
         </div>
         <!-- <div class="form-group">
           <label for="">Tanggal Kembali</label>
