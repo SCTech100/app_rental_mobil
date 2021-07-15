@@ -11,11 +11,10 @@
       <tr>
         <th>No</th>
         <th>Nama</th>
-        <th>Username</th>
+        <th>Nama Perusahaan</th>
         <th>Alamat</th>
-        <th>Gender</th>
-        <th>No. Telepon</th>
-        <th>No. KTP</th>
+        <!-- <th>Gender</th> -->
+        <th>No. Telepon</th> 
         <th>Password</th>
         <th>Action</th>
       </tr>
@@ -26,11 +25,10 @@
       <tr>
         <td><?= $no++; ?>.</td>
         <td><?= $cs->nama; ?></td>
-        <td><?= $cs->username; ?></td>
+        <td><?= $cs->nama_perusahaan; ?></td>
         <td><?= $cs->alamat; ?></td>
-        <td><?= $cs->gender; ?></td>
-        <td><?= $cs->no_telepon; ?></td>
-        <td><?= $cs->no_ktp; ?></td>
+        <!-- <td><?= $cs->gender; ?></td> -->
+        <td><?= $cs->no_telepon; ?></td> 
         <td><?= $cs->password; ?></td>
         <td>
           <div class="row">

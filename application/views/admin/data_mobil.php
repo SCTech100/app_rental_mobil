@@ -1,7 +1,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Mobil</h1>
+      <h1>Data Forklift</h1>
     </div>
     
     <a href="<?= base_url('admin/data_mobil/tambah_mobil'); ?>" class="btn btn-primary mb-3">Tambah Data</a>
@@ -10,11 +10,9 @@
     <table class="table table-hover table-striped table-bordered">
       <thead>
         <tr>
-          <th>No</th>
-          <th>Gambar</th>
+          <th>No</th> 
           <th>Tipe</th>
-          <th>Merek</th>
-          <th>Nomor Plat</th>
+          <th>Merek</th> 
           <th>Status</th>
           <th>Aksi</th>
         </tr>
@@ -22,15 +20,15 @@
       <tbody>
         <?php
         $no = 1;
-        foreach($mobil as $mb): ?>
+        foreach($mobil as $mb): ?> 
         <tr>
           <td><?= $no++; ?>.</td>
-          <td>
+          <!-- <td>
             <img width="70px;" src="<?= base_url('assets/upload/'). $mb->gambar; ?>" alt="">
-          </td>
+          </td> -->
           <td><?= $mb->kode_tipe; ?></td>
-          <td><?= $mb->merek; ?></td>
-          <td><?= $mb->no_plat; ?></td>
+          <td><?= $mb->nama_tipe; ?></td>
+          <!-- <td><?= $mb->no_plat; ?></td> -->
           <td>
             <?php if($mb->status == 0){ ?>
               <span class="badge badge-danger">Tidak Tersedia</span>

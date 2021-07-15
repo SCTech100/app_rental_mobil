@@ -12,10 +12,14 @@
         <div class="col-md-6">
           <table class="table">
             <tr>
-              <th>Merek</th>
-              <td><?= $dt->merek; ?></td>
+              <th>Tipe Forklift</th>
+              <td><?= $dt->kode_tipe; ?></td>
             </tr>
             <tr>
+              <th>Merk</th>
+              <td><?= $dt->nama_tipe?></td>
+            </tr>
+            <!-- <tr>
               <th>No. Plat</th>
               <td><?= $dt->no_plat; ?></td>
             </tr>
@@ -26,7 +30,7 @@
             <tr>
               <th>Tahun Mobil</th>
               <td><?= $dt->tahun; ?></td>
-            </tr>
+            </tr> -->
             <tr>
               <th>Status</th>
               <td>

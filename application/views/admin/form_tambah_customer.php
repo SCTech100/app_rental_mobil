@@ -11,6 +11,11 @@
         <?= form_error('nama', '<div class="text-small text-danger">', '</div>') ?>
       </div>
       <div class="form-group"> 
+        <label for="">Nama Perusahaan</label>
+        <input type="text" name="nama_perusahaan" class="form-control">
+        <?= form_error('nama_perusahaan', '<div class="text-small text-danger">', '</div>') ?>
+      </div>
+      <div class="form-group"> 
         <label for="">Username</label>
         <input type="text" name="username" class="form-control">
         <?= form_error('username', '<div class="text-small text-danger">', '</div>') ?>
@@ -19,26 +24,12 @@
         <label for="">Alamat</label>
         <input type="text" name="alamat" class="form-control">
         <?= form_error('alamat', '<div class="text-small text-danger">', '</div>') ?>
-      </div>
-      <div class="form-group"> 
-        <label for="">Gender</label>
-        <select name="gender" id="" class="form-control">
-          <option value="">--Pilih Gender--</option>
-          <option value="laki-laki">Laki-laki</option>
-          <option value="perempuan">Perempuan</option>
-        </select>
-        <?= form_error('gender', '<div class="text-small text-danger">', '</div>') ?>
-      </div>
+      </div> 
       <div class="form-group"> 
         <label for="">No. Telepon</label>
         <input type="text" name="no_telepon" class="form-control">
         <?= form_error('no_telepon', '<div class="text-small text-danger">', '</div>') ?>
-      </div>
-      <div class="form-group"> 
-        <label for="">No. KTP</label>
-        <input type="text" name="no_ktp" class="form-control">
-        <?= form_error('no_ktp', '<div class="text-small text-danger">', '</div>') ?>
-      </div>
+      </div> 
       <div class="form-group"> 
         <label for="">Password</label>
         <input type="password" name="password" class="form-control">

@@ -26,7 +26,8 @@ class Data_mobil extends CI_Controller{
   }
 
   public function index(){
-    $data['mobil'] = $this->rental_model->get_data('mobil')->result();
+    $data['mobil'] = $this->db->query("SELECT * FROM mobil mb, tipe tp WHERE mb.id_tipe = tp.id_tipe")->result();
+    //$data['mobil'] = $this->rental_model->get_data('mobil')->result();
     $data['tipe'] = $this->rental_model->get_data('tipe')->result();
     $this->load->view('templates_admin/header');
     $this->load->view('templates_admin/sidebar');
@@ -49,18 +50,18 @@ class Data_mobil extends CI_Controller{
       $this->tambah_mobil();
     }
     else{
-      $kode_tipe    = $this->input->post('kode_tipe');
-      $merek        = $this->input->post('merek');
-      $no_plat      = $this->input->post('no_plat');
-      $warna        = $this->input->post('warna');
-      $tahun        = $this->input->post('tahun');
+      $id_tipe    = $this->input->post('id_tipe');  
+      // $merek        = $this->input->post('merek');
+      // $no_plat      = $this->input->post('no_plat');
+      // $warna        = $this->input->post('warna');
+      // $tahun        = $this->input->post('tahun');
       $status       = $this->input->post('status');
       $harga        = $this->input->post('harga');
-      $denda        = $this->input->post('denda');
-      $ac           = $this->input->post('ac');
-      $sopir        = $this->input->post('sopir');
-      $mp3_player   = $this->input->post('mp3_player');
-      $central_lock = $this->input->post('central_lock');
+      // $denda        = $this->input->post('denda');
+      // $ac           = $this->input->post('ac');
+      // $sopir        = $this->input->post('sopir');
+      // $mp3_player   = $this->input->post('mp3_player');
+      // $central_lock = $this->input->post('central_lock');
       $gambar    = $_FILES['gambar']['name'];
 
       if($gambar=''){}
@@ -77,21 +78,21 @@ class Data_mobil extends CI_Controller{
         }
       }
       $data = array(
-        'kode_tipe'    => $kode_tipe,
-        'merek'        => $merek,
-        'no_plat'      => $no_plat,
-        'tahun'        => $tahun,
-        'warna'        => $warna,
+        'id_tipe'    => $id_tipe,
+        // 'merek'        => $merek,
+        // 'no_plat'      => $no_plat,
+        // 'tahun'        => $tahun,
+        // 'warna'        => $warna,
         'status'       => $status,
         'harga'        => $harga,
-        'denda'        => $denda,
-        'ac'           => $ac,
-        'sopir'        => $sopir,
-        'mp3_player'   => $mp3_player,
-        'central_lock' => $central_lock,
+        // 'denda'        => $denda,
+        // 'ac'           => $ac,
+        // 'sopir'        => $sopir,
+        // 'mp3_player'   => $mp3_player,
+        // 'central_lock' => $central_lock,
         'gambar'       => $gambar,
       );
-
+      // $this->db->query("INSERT INTO mobil (id_tipe, status, harga, gambar) values ()")
       $this->rental_model->insert_data($data, 'mobil');
       $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
       Data berhasil ditambahkan
@@ -104,7 +105,7 @@ class Data_mobil extends CI_Controller{
 
   public function update_mobil($id){
     $where = array('id_mobil' => $id);
-    $data['mobil'] = $this->db->query("SELECT * FROM mobil mb, tipe tp WHERE mb.kode_tipe = tp.kode_tipe AND mb.id_mobil = '$id'")->result();
+    $data['mobil'] = $this->db->query("SELECT * FROM mobil mb, tipe tp WHERE mb.id_tipe = tp.id_tipe AND mb.id_mobil = '$id'")->result();
     $data['tipe'] = $this->rental_model->get_data('tipe')->result();
     $this->load->view('templates_admin/header');
     $this->load->view('templates_admin/sidebar');
@@ -121,18 +122,18 @@ class Data_mobil extends CI_Controller{
     }
     else{
       $id           = $this->input->post('id_mobil');
-      $kode_tipe    = $this->input->post('kode_tipe');
-      $merek        = $this->input->post('merek');
-      $no_plat      = $this->input->post('no_plat');
-      $warna        = $this->input->post('warna');
-      $tahun        = $this->input->post('tahun');
+      $id_tipe    = $this->input->post('id_tipe');
+      // $merek        = $this->input->post('merek');
+      // $no_plat      = $this->input->post('no_plat');
+      // $warna        = $this->input->post('warna');
+      // $tahun        = $this->input->post('tahun');
       $status       = $this->input->post('status');
       $harga        = $this->input->post('harga');
-      $denda        = $this->input->post('denda');
-      $ac           = $this->input->post('ac');
-      $sopir        = $this->input->post('sopir');
-      $mp3_player   = $this->input->post('mp3_player');
-      $central_lock = $this->input->post('central_lock');
+      // $denda        = $this->input->post('denda');
+      // $ac           = $this->input->post('ac');
+      // $sopir        = $this->input->post('sopir');
+      // $mp3_player   = $this->input->post('mp3_player');
+      // $central_lock = $this->input->post('central_lock');
       $gambar    = $_FILES['gambar']['name'];
 
       if($gambar){
@@ -150,18 +151,18 @@ class Data_mobil extends CI_Controller{
         }
       }
       $data = array(
-        'kode_tipe'    => $kode_tipe,
-        'merek'        => $merek,
-        'no_plat'      => $no_plat,
-        'tahun'        => $tahun,
-        'warna'        => $warna,
+        'id_tipe'    => $id_tipe,
+        // 'merek'        => $merek,
+        // 'no_plat'      => $no_plat,
+        // 'tahun'        => $tahun,
+        // 'warna'        => $warna,
         'status'       => $status,
         'harga'        => $harga,
-        'denda'        => $denda,
-        'ac'           => $ac,
-        'sopir'        => $sopir,
-        'mp3_player'   => $mp3_player,
-        'central_lock' => $central_lock,
+        // 'denda'        => $denda,
+        // 'ac'           => $ac,
+        // 'sopir'        => $sopir,
+        // 'mp3_player'   => $mp3_player,
+        // 'central_lock' => $central_lock,
       );
       $where = array('id_mobil' => $id);
 
@@ -197,18 +198,18 @@ class Data_mobil extends CI_Controller{
   }
 
   public function _rules(){
-    $this->form_validation->set_rules('kode_tipe', 'Kode Tipe', 'required');
-    $this->form_validation->set_rules('merek', 'Merek', 'required');
-    $this->form_validation->set_rules('no_plat', 'Nomor Plat', 'required');
-    $this->form_validation->set_rules('tahun', 'Tahun', 'required');
-    $this->form_validation->set_rules('warna', 'Warna', 'required');
+    $this->form_validation->set_rules('id_tipe', 'Kode Tipe', 'required');
+    // $this->form_validation->set_rules('merek', 'Merek', 'required');
+    // $this->form_validation->set_rules('no_plat', 'Nomor Plat', 'required');
+    // $this->form_validation->set_rules('tahun', 'Tahun', 'required');
+    // $this->form_validation->set_rules('warna', 'Warna', 'required');
     $this->form_validation->set_rules('status', 'Status', 'required');
     $this->form_validation->set_rules('harga', 'Harga', 'required');
-    $this->form_validation->set_rules('denda', 'Denda', 'required');
-    $this->form_validation->set_rules('ac', 'AC', 'required');
-    $this->form_validation->set_rules('sopir', 'Sopir', 'required');
-    $this->form_validation->set_rules('mp3_player', 'MP3 Player', 'required');
-    $this->form_validation->set_rules('central_lock', 'Central Lock', 'required');
+    // $this->form_validation->set_rules('denda', 'Denda', 'required');
+    // $this->form_validation->set_rules('ac', 'AC', 'required');
+    // $this->form_validation->set_rules('sopir', 'Sopir', 'required');
+    // $this->form_validation->set_rules('mp3_player', 'MP3 Player', 'required');
+    // $this->form_validation->set_rules('central_lock', 'Central Lock', 'required');
   }
 
 

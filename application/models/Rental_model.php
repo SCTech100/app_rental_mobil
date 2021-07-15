@@ -19,8 +19,9 @@ class Rental_model extends CI_Model{
   }
 
   public function ambil_id_mobil($id){
-    $hasil = $this->db->where('id_mobil', $id)->get('mobil');
-
+    //$hasil = $this->db->where('id_mobil', $id)->get('mobil');
+    $hasil = $this->db->select('mobil.*,tipe.kode_tipe, tipe.nama_tipe, ')->from('mobil')->where('id_mobil', $id)->join('tipe', 'mobil.id_tipe = tipe.id_tipe')->get() ;
+     
     if($hasil->num_rows() > 0){
       return $hasil->result();
     }

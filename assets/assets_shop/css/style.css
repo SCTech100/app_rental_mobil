@@ -419,6 +419,8 @@ header .navbar {
 
 .blog-posts .blog-thumb img {
 	width: 100%;
+	height: 150px;
+	object-fit: contain;
 	overflow: hidden;
 }
 
@@ -1115,7 +1117,7 @@ footer p a:hover {
 }
 .dropdown-item {
 	padding-top: 10px;
-	padding-bottom: 10px;item-content
+	padding-bottom: 10px; 
 }
 
 .btn-primary {

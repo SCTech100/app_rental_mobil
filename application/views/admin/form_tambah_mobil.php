@@ -13,15 +13,15 @@
               <div class="form-group">
                 <label for="">Tipe Mobil</label>
                 <select name="kode_tipe" id="" class="form-control">
-                  <option value="">--Pilih Tipe Mobil--</option>
+                  <option value="">--Pilih Tipe Mobil--</option> 
                   <?php foreach($tipe as $tp): ?>
-                  <option value="<?= $tp->kode_tipe ?>"><?= $tp->nama_tipe; ?></option>
+                  <option value="<?= $tp->id_tipe ?>"><?= $tp->kode_tipe . ' - ' . $tp->nama_tipe ?></option>
                   <?php endforeach; ?>
                 </select>
                 <?= form_error('kode_tipe', '<div class="text-small text-danger">', '</div>') ?>
               </div>
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="">Merek</label>
                 <input type="text" name="merek" class="form-control">
                 <?= form_error('merek', '<div class="text-small text-danger">', '</div>') ?>
@@ -77,17 +77,17 @@
                   <option value="0">Tidak Tersedia</option>
                 </select>
                 <?= form_error('central_lock', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
+              </div> -->
 
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <label for="">Harga Sewa perhari</label>
+                <label for="">Harga Sewa/jam</label>
                 <input type="number" name="harga" class="form-control">
                 <?= form_error('harga', '<div class="text-small text-danger">', '</div>') ?>
               </div>
 
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="">Denda</label>
                 <input type="number" name="denda" class="form-control">
                 <?= form_error('denda', '<div class="text-small text-danger">', '</div>') ?>
@@ -97,7 +97,7 @@
                 <label for="">Tahun</label>
                 <input type="text" name="tahun" class="form-control">
                 <?= form_error('tahun', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
+              </div> -->
 
               <div class="form-group">
                 <label for="">Status</label>

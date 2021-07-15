@@ -49,6 +49,7 @@ class Data_customer extends CI_Controller{
     else{
       $nama       = $this->input->post('nama');
       $username   = $this->input->post('username');
+      $nama_perusahaan   = $this->input->post('nama_perusahaan');
       $alamat     = $this->input->post('alamat');
       $gender     = $this->input->post('gender');
       $no_telepon = $this->input->post('no_telepon');
@@ -58,6 +59,7 @@ class Data_customer extends CI_Controller{
       $data = array(
         'nama'       => $nama,
         'username'   => $username,
+        'nama_perusahaan'   => $nama_perusahaan,
         'alamat'     => $alamat,
         'gender'     => $gender,
         'no_telepon' => $no_telepon,
@@ -94,6 +96,7 @@ class Data_customer extends CI_Controller{
     else{
       $id         = $this->input->post('id_customer');
       $nama       = $this->input->post('nama');
+      $nama_perusahaan   = $this->input->post('nama_perusahaan');
       $username   = $this->input->post('username');
       $alamat     = $this->input->post('alamat');
       $gender     = $this->input->post('gender');
@@ -104,6 +107,7 @@ class Data_customer extends CI_Controller{
       $data = array(
         'nama'       => $nama,
         'username'   => $username,
+        'nama_perusahaan'   => $nama_perusahaan,
         'alamat'     => $alamat,
         'gender'     => $gender,
         'no_telepon' => $no_telepon,
@@ -136,11 +140,12 @@ class Data_customer extends CI_Controller{
 
   public function _rules(){
     $this->form_validation->set_rules('nama', 'Nama', 'required');
+    $this->form_validation->set_rules('nama_perusahaan', 'Nama Perusahaan', 'required');
     $this->form_validation->set_rules('username', 'Username', 'required');
     $this->form_validation->set_rules('alamat', 'Alamat', 'required');
-    $this->form_validation->set_rules('gender', 'Gender', 'required');
+    // $this->form_validation->set_rules('gender', 'Gender', 'required');
     $this->form_validation->set_rules('no_telepon', 'No. telepon', 'required');
-    $this->form_validation->set_rules('no_ktp', 'No. KTP', 'required|numeric');
+    // $this->form_validation->set_rules('no_ktp', 'No. KTP', 'required|numeric');
     $this->form_validation->set_rules('password', 'Password', 'required');
   }
 

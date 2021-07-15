@@ -1,7 +1,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Data Tipe Mobil</h1>
+      <h1>Data Tipe Forklift</h1>
     </div>
     
     <a href="<?= base_url('admin/data_tipe/tambah_tipe'); ?>" class="btn btn-primary mb-3">Tambah Data</a>
@@ -11,8 +11,8 @@
       <thead>
         <tr>
           <th width="20px;">No</th>
-          <th>Kode Tipe</th>
-          <th>Nama Tipe</th>
+          <th>Tipe Forklift</th>
+          <th>Merk</th>
           <th width="180px;">Aksi</th>
         </tr>
       </thead>
