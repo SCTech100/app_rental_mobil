@@ -1,0 +1,12 @@
+Note:
+1.Form Rental Forklift: Denda/Jam , Tanggal rental dan pengembalian Dihapus. Di ganti dengan Jam Sewa dan Lama sewa
+2. Produk: Tampilannya dipersimpel saja jadi gambar dan nama Produk sama tanda rental / tidak tersedia aja
+3. Informasi Produk : Dipersimpel Menjadi Tipe Forklift,Merk,Harga Sewa
+4.Data Mobil: namanya diUbah jadi Data Forklift, isinya diubah menjadi tipe, merk, status
+5.Data Tipe Mobil: diubah menjadi data tipe forklift sama Merk
+6.Data Customer: Username diubah Menjadi Nama perusahaan, Gender dan NO ktp dihapus 
+7.Data Transaksi: Tgl rental dan pengembalian diganti dengan Lama sewa dan Waktu sewa, Harga /hari diganti Harga/jam. Denda/hari, Total DEnda,Tanggal dikembalikan,dan status pengembalian dihapus sisain status rental
+8.Register: Username diganti nama perusahaan, Gender dan No ktp dihapus
+9.di homepage,Tambahin data Tentang perusahaan di "ABout US" , Bagian "Anda Berminat Sewa Forklift hubungi Kami " dihapus, tampilan area pelayanan diperbaiki sediki
+10. di bagian Invoice disesuaikan dengan data transaksi datanya, sama bagian laporan diadmin
+11. sesuaikan dengan Database
