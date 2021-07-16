@@ -10,7 +10,7 @@
           <table class="table">
           <?php foreach($transaksi as $tr): ?>
             <tr>
-              <th>Merek Mobil</th>
+              <th>Tipe Forklift</th>
               <td>:</td>
               <td><?= $tr->merek; ?></td>
             </tr>
@@ -20,29 +20,24 @@
               <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
             </tr>
             <tr>
-              <th>Tanggal Kembali</th>
+              <th>Jam Rental</th>
               <td>:</td>
-              <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
+              <td><?= time('H/m', strtotime($tr->tgl_rental)); ?></td>
             </tr>
             <tr>
-              <th>Biaya Sewa Perhari</th>
+              <th>Lama Sewa (Jam)</th>
+              <td>:</td>
+              <td><?= $tr->lama_sewa; ?></td>
+            </tr> 
+            <tr>
+              <th>Harga Sewa Perjam</th>
               <td>:</td>
               <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
-            </tr>
-            <tr>
-              <?php 
-                $x = strtotime($tr->tgl_kembali);
-                $y = strtotime($tr->tgl_rental);
-                $jmlHari = abs(($x - $y)/(60*60*24));
-              ?>
-              <th>Jumlah Hari Sewa</th>
-              <td>:</td>
-              <td><?= $jmlHari; ?> Hari</td>
-            </tr>
+            </tr> 
             <tr class="text-success">
               <th>Jumlah Pembayaran</th>
               <td>:</td>
-              <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga * $jmlHari, 0, ',', '.'); ?>,-</button></td>
+              <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga * $lama_sewa, 0, ',', '.'); ?>,-</button></td>
             </tr>
             <tr>
               <td></td>
