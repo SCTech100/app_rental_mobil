@@ -18,14 +18,14 @@
         </div> -->
         <div class="form-group">
           <label for="">Tanggal Sewa</label>
-          <input type="date" name="tgl_rental" class="form-control" style="width: 200px">
+          <input type="date" name="tanggal_sewa" class="form-control" style="width: 200px">
         </div>
         <div class="form-group">
           <label for="">Jam Sewa</label>
-          <input type="time" name="jam_rental" class="form-control" style="width: 200px" >
+          <input type="time" name="waktu_sewa" class="form-control" style="width: 200px" >
         </div>
         <div class="form-group">
-          <label for="">Lama Sewa</label>
+          <label for="">Lama Sewa / Jam</label>
           <input type="number" name="lama_sewa" class="form-control" style="width: 200px" min="1" max="90" >
         </div>
         <!-- <div class="form-group">

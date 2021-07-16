@@ -8,17 +8,16 @@
       <tr>
         <th>No</th>
         <th>Customer</th>
-        <th>Mobil</th>
-        <th>Tgl. Rental</th>
-        <th>Tgl. Kembali</th>
-        <th>Harga/Hari</th>
-        <th>Denda/Hari</th>
-        <th>Total Denda</th>
-        <th>Tgl. Dikembalikan</th>
-        <th>Status Pengembalian</th>
+        <th style="width: 100px;">Mobil</th>
+        <th>Tanggal Rental</th>
+        <th>Jam Rental</th>
+        <th>Lama Rental (Jam)</th>
+        <th>Harga/Jam</th>     
         <th>Status Rental</th>
-        <th>Cek Pembayaran</th>
+        <!-- <th>Cek Pembayaran</th> -->
         <th>Total Pembayaran</th>
+        <th>Status Pembayaran</th>
+        <th>Bukti Pembayaran</th>
         <th>Action</th>
       </tr>
 
@@ -28,52 +27,29 @@
       <tr>
         <td><?= $no++; ?></td>
         <td><?= $tr->nama; ?></td>
-        <td><?= $tr->merek; ?></td>
-        <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
-        <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
-        <td>Rp.<?= number_format($tr->harga, 0,',','.'); ?>,-</td>
-        <td>Rp.<?= number_format($tr->denda, 0,',','.'); ?>,-</td>
-        <td>Rp.<?= number_format($tr->total_denda, 0,',','.'); ?>,-</td>
+        <td style="width: 100px;"><?= $tr->kode_tipe . '-' . $tr->nama_tipe; ?></td>
+        <td><?= date('d/m/Y', strtotime($tr->tanggal_sewa)); ?></td>
+        <td><?= date('H:i',strtotime($tr->waktu_sewa)); ?></td>
+        <td><?= $tr->lama_sewa; ?></td> 
+        <td>Rp.<?= number_format($tr->harga, 0,',','.'); ?>,-</td>  
+        <td><?= $tr->status_rental; ?></td> 
+        <td>Rp.<?= number_format($tr->totalpembayaran, 0,',','.'); ?>,-</td>   
         <td>
-          <?php if($tr->tgl_pengembalian == "0000-00-00"){
-            echo "-";
-          }else{
-            echo date('d/m/Y', strtotime($tr->tgl_pengembalian));
-          } ?>
-        </td>
-
+          <?php if ($tr->status_pembayaran == "1") { ?> 
+            <div>Telah Bayar</div> 
+          <?php } else { ?> 
+            <div>Belum Bayar</div> 
+          <?php } ?>  
+        </td>  
+ 
         <td>
-          <?php if($tr->tgl_pengembalian == "0000-00-00"){
-            echo "Belum Kembali";
-          }else{
-            echo "Kembali";
-          }?>
-        </td>
+          <?php if ($tr->bukti_pembayaran != "" || $tr->bukti_pembayaran != null) { ?> 
+            <a href="<?php echo 'test' + $tr->bukti_pembayaran ?>"><img src="" width="100%"></img></a> 
+          <?php } else { ?> 
+            <div></div> 
+          <?php } ?>  
+        </td>  
 
-
-        <td>
-          <?php if($tr->tgl_pengembalian == "0000-00-00"){
-            echo "Belum Selesai";
-          }else{
-            echo "Selesai";
-          }?>
-        </td>
-
-        <td>
-          <center>
-            <?php if(empty($tr->bukti_pembayaran)){ ?>
-              <button class="btn btn-sm btn-danger"><i class="fas fa-times-circle"></i></button>
-            <?php }
-            else{ ?>
-              <a class="btn btn-sm btn-primary" href="<?= base_url('admin/transaksi/pembayaran/'.$tr->id_rental); ?>"><i class="fas fa-check-circle"></i></a>
-            <?php } ?>
-          </center>
-        </td>
-
-        <td>
-          Rp.<?= number_format($tr->harga + $tr->total_denda, 0, ',', '.'); ?>,-
-        </td>
-        
         <td>
           <?php if($tr->status == "1"){
             echo "-";

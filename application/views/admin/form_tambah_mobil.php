@@ -109,10 +109,10 @@
                 <?= form_error('status', '<div class="text-small text-danger">', '</div>') ?>
               </div>
               
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label for="">Gambar</label>
                 <input type="file" name="gambar" class="form-control">
-              </div>
+              </div> -->
 
               <button type="submit" class="btn btn-primary mt-4">Simpan</button>
               <button type="reset" class="btn btn-success mt-4">Reset</button>

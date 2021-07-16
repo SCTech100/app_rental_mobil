@@ -8,12 +8,12 @@
     <form action="<?= base_url('admin/transaksi/transaksi_selesai_aksi'); ?>" method="post">
       <input type="hidden" name="id_rental" value="<?= $tr->id_rental; ?>">
       <input type="hidden" name="id_mobil" value="<?= $tr->id_mobil; ?>">
-      <input type="hidden" name="tgl_kembali" value="<?= $tr->tgl_kembali; ?>">
-      <input type="hidden" name="denda" value="<?= $tr->denda; ?>">
-      <div class="form-group">
+      <!-- <input type="hidden" name="tgl_kembali" value="<?= $tr->tgl_kembali; ?>"> -->
+      <!-- <input type="hidden" name="denda" value="<?= $tr->denda; ?>"> -->
+      <!-- <div class="form-group">
         <label for="">Tanggal Pengembalian</label>
         <input type="date" name="tgl_pengembalian" class="form-control" value="<?= $tr->tgl_pengembalian; ?>">
-      </div>
+      </div> -->
       <!-- <div class="form-group">
         <label for="">Status Pengembalian</label>
         <select name="status_pengembalian" id="" class="form-control">

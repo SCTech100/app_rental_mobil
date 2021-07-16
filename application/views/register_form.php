@@ -20,7 +20,7 @@
                       <?= form_error('nama', '<div class="text-small text-danger">', '</div>'); ?>
                     </div>
                     <div class="form-group col-6">
-                      <label for="username">Username</label>
+                      <label for="username">Nama Perusahaan</label>
                       <input id="username" type="text" class="form-control" name="username">
                       <?= form_error('username', '<div class="text-small text-danger">', '</div>'); ?>
                     </div>
@@ -34,7 +34,7 @@
                     </div>
                   </div>
 
-                  <div class="row">
+                  <!-- <div class="row">
                     <div class="form-group col-6">
                       <label for="gender" class="d-block">Gender</label>
                       <select name="gender" id="" class="form-control">
@@ -49,14 +49,14 @@
                       <input id="no_telepon" type="text" class="form-control" name="no_telepon">
                       <?= form_error('no_telepon', '<div class="text-small text-danger">', '</div>'); ?>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div class="row">
-                    <div class="form-group col-6">
+                    <!-- <div class="form-group col-6">
                       <label>No. KTP</label>
                       <input type="text" name="no_ktp" class="form-control">
                       <?= form_error('no_ktp', '<div class="text-small text-danger">', '</div>'); ?>
-                    </div>
+                    </div> -->
                     <div class="form-group col-6">
                       <label>Password</label>
                       <input type="password" name="password" class="form-control">

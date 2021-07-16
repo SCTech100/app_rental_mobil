@@ -35,26 +35,26 @@ class Rental extends CI_Controller{
   public function tambah_rental_aksi(){
     $id_customer     = $this->session->userdata('id_customer');
     $id_mobil        = $this->input->post('id_mobil');
-    $tgl_rental      = $this->input->post('tgl_rental');
-    $jam_rental           = $this->input->post('jam_rental');
+    $tanggal_sewa      = $this->input->post('tanggal_sewa');
+    $waktu_sewa           = $this->input->post('waktu_sewa');
     $lama_sewa           = $this->input->post('lama_sewa');
     $harga           = $this->input->post('harga');
-    $tgl_kembali     = $this->input->post('tgl_kembali');
-    $denda           = $this->input->post('denda'); 
+    // $tgl_kembali     = $this->input->post('tgl_kembali');
+    // $denda           = $this->input->post('denda'); 
 
     $data = array(
       'id_customer'          => $id_customer,
       'id_mobil'             => $id_mobil,
-      'tgl_rental'           => $tgl_rental,
-      'jam_rental'           => $jam_rental,
+      'tanggal_sewa'           => $tanggal_sewa,
+      'waktu_sewa'           => $waktu_sewa,
       'lama_sewa'           => $lama_sewa,
-      'tgl_kembali'          => $tgl_kembali,
-      'denda'                => $denda,
+      // 'tgl_kembali'          => $tgl_kembali,
+      // 'denda'                => $denda,
       'harga'                => $harga,
-      'tgl_pengembalian'     => '-',
+      // 'tgl_pengembalian'     => '-',
       'status_rental'        => 'Belum Selesai',
-      'status_pengembalian'  => 'Belum Kembali',
-      'total_denda'          => '0'
+      // 'status_pengembalian'  => 'Belum Kembali',
+      // 'total_denda'          => '0'
     );
 
     $this->rental_model->insert_data($data, 'transaksi');
