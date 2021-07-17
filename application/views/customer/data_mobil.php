@@ -33,7 +33,7 @@
                 <img src="<?= base_url('assets/upload/') . $mb->gambar ?>" alt="">
               </div>
               <div class="down-content" style="padding: 0">
-                <a href="offers.html"><h4 style="text-align: center;"><?= $mb->kode_tipe . ' - ' . $mb->nama_tipe; ?></h4></a>
+                <a href="<?= base_url('customer/data_mobil/detail_mobil/'.$mb->id_mobil) ?>"><h4 style="text-align: center;"><?= $mb->kode_tipe . ' - ' . $mb->nama_tipe; ?></h4></a>
                 <!-- <span>Rp. <?= number_format($mb->harga,0,',','.'); ?>,-</span> <strong>per jam</strong> -->
 
                 <!-- <div class="row">
