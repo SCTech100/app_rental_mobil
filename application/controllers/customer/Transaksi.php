@@ -88,8 +88,12 @@ class Transaksi extends CI_Controller{
     // die;
     $data2 = array('status' => '1');
 
+    $data3 = array(
+      'status_pembayaran' => 2
+    );
     $this->rental_model->update_data('mobil', $data2, $where2);
-    $this->rental_model->delete_data($where, 'transaksi');
+    $this->rental_model->update_data('transaksi', $data3, $where); 
+    // $this->rental_model->delete_data($where, 'transaksi');
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     Transaksi berhasil dibatalkan
     <button type="button" class="close" data-dismiss="alert" aria-label="close">

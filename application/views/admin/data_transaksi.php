@@ -44,7 +44,7 @@
         <?php if ($tr->status_pembayaran == "1") { ?> 
             <div>Telah Bayar</div> 
           <?php } else if($tr->status_pembayaran == "2"){ ?> 
-            <div>Ditolak</div> 
+            <div>Dibatalkan</div> 
           <?php } else if($tr->bukti_pembayaran == null){ ?> 
             <div>
               

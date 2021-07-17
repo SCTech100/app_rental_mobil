@@ -35,7 +35,7 @@
           <td>
             <?php if($tr->status_rental == "Selesai"){ ?>
               <button class="btn btn-sm btn-success">Rental Selesai</button>
-            <?php } else if($tr->status_rental == "Dibatalkan"){ ?>
+            <?php } else if($tr->status_pembayaran == "2"){ ?>
               <button class="btn btn-sm btn-danger">Rental Dibatalkan</button>
             <?php } else{ ?>
               <a href="<?= base_url('customer/transaksi/pembayaran/'.$tr->id_rental); ?>" class="btn btn-sm btn-success">Cek Pembayaran</a>
@@ -43,7 +43,7 @@
           </td>
           <td>
             
-            <?php if($tr->status_rental == 'Belum Selesai'){ ?>
+            <?php if($tr->status_rental == 'Belum Selesai' && $tr->status_pembayaran == 0){ ?>
               <a onclick="return confirm('Yakin batal?')" class="btn btn-sm btn-danger" href="<?= base_url('customer/transaksi/batal_transaksi/'.$tr->id_rental) ?>">Batal</a>
             <?php }
             else{ ?>

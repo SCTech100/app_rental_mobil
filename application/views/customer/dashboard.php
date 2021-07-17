@@ -186,6 +186,7 @@
           </div>
         </div>
       </div>
+      <hr>
     </div>
   </div>
 </section>
@@ -216,24 +217,28 @@
     <div class="all-blog-posts">
       <h2 class="text-center">Area Layanan</h2>
       <br>
+      <p  class="text-center"> Saat ini Kami telah beroperasi pada beberapa titik di <b>Kota Jakarta, Indonesia.</b>   
+      Berikut daftar wilayahnya:
+      </p>
+      <br>
       <div class="row">
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Kamal Muara</p>
+          <h5>Kamal Muara</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Tegal Alur</p>
+          <h5>Tegal Alur</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Cengkareng</p>
+          <h5>Cengkareng</h5>
         </div>
       </div> 
       
@@ -242,19 +247,19 @@
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Kapuk</p>
+          <h5>Kapuk</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>PIK</p>
+          <h5>PIK</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Dadap</p>
+          <h5>Dadap</h5>
         </div>
       </div> 
       
@@ -263,21 +268,22 @@
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Rawa Bokor</p>
+          <h5>Rawa Bokor</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Taman Palem</p>
+          <h5>Taman Palem</h5>
         </div>
         <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
           <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
         </div>
         <div class="col-md-3 col-sm-3" style="margin: auto">
-          <p>Komples Citra</p>
+          <h5>Kompleks Citra</h5>
         </div>
       </div> 
+<hr>
         <!-- <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
@@ -321,7 +327,6 @@
     </div>
   </div>
 </section>
-
 <div class="blog-posts">
   <div class="container">
     <div class="All-blog-posts">
