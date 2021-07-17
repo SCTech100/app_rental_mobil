@@ -217,10 +217,71 @@
       <h2 class="text-center">Area Layanan</h2>
       <br>
       <div class="row">
-        <div class="col-md-4 col-sm-6">
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Kamal Muara</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Tegal Alur</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Cengkareng</p>
+        </div>
+      </div> 
+      
+      <div class="row">
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Kapuk</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>PIK</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Dadap</p>
+        </div>
+      </div> 
+      
+      <div class="row">
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Rawa Bokor</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Taman Palem</p>
+        </div>
+        <div class="col-md-1 col-sm-1" style="margin: auto; text-align: center;">
+          <img style="width: 50%" src="<?= base_url('assets/assets_shop') ?>/images/pin.png" alt=""> 
+        </div>
+        <div class="col-md-3 col-sm-3" style="margin: auto">
+          <p>Komples Citra</p>
+        </div>
+      </div> 
+        <!-- <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
-            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/forkliftkom2.jpg" alt="">
+            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/1.jpeg" alt="">
           
             </div>
             <div class="down-content">
@@ -234,7 +295,7 @@
           <div class="blog-post">
             <div class="blog-thumb">
               
-            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/forkliftkom2.jpg" alt="">
+            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/2.jpeg" alt="">
           
             </div>
             <div class="down-content">  
@@ -247,6 +308,7 @@
         <div class="col-md-4 col-sm-6">
           <div class="blog-post">
             <div class="blog-thumb">
+            <img style="width: 100%" src="<?= base_url('assets/assets_shop') ?>/images/3.jpeg" alt="">
             </div>
             <div class="down-content">
               <p>Rawa Bokor dan Sekitarnya</p>
@@ -254,8 +316,8 @@
 							<p>Citra dan Sekitarnya</p>
             </div>
           </div>
-        </div>
-      </div>
+        </div> -->
+      <!-- </div> -->
     </div>
   </div>
 </section>

@@ -1,10 +1,10 @@
       <footer class="main-footer">
-        <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-        </div>
-        <div class="footer-right">
-          2.3.0
-        </div>
+        <div class="footer-left"> 
+          <p>
+            Copyright © 2021 CV. Alie Mitra Utama
+            | Developer: Steven M.S 
+          </p>
+        </div> 
       </footer>
     </div>
   </div>

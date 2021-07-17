@@ -11,8 +11,10 @@
       <thead>
         <tr>
           <th>No</th> 
+          <th>Gambar</th>
           <th>Tipe</th>
           <th>Merek</th> 
+          <th>Harga/Jam</th> 
           <th>Status</th>
           <th>Aksi</th>
         </tr>
@@ -23,12 +25,13 @@
         foreach($mobil as $mb): ?> 
         <tr>
           <td><?= $no++; ?>.</td>
-          <!-- <td>
-            <img width="70px;" src="<?= base_url('assets/upload/'). $mb->gambar; ?>" alt="">
-          </td> -->
+          <td style="text-align:center">
+            <img width="70px;text-align:center" src="<?= base_url('assets/upload/'). $mb->gambar; ?>" alt="">
+          </td>
           <td><?= $mb->kode_tipe; ?></td>
           <td><?= $mb->nama_tipe; ?></td>
-          <!-- <td><?= $mb->no_plat; ?></td> -->
+           
+          <td>Rp.<?= number_format($mb->harga, 0, ',', '.'); ?>,-</td>
           <td>
             <?php if($mb->status == 0){ ?>
               <span class="badge badge-danger">Tidak Tersedia</span>

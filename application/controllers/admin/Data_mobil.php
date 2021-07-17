@@ -50,18 +50,9 @@ class Data_mobil extends CI_Controller{
       $this->tambah_mobil();
     }
     else{
-      $id_tipe    = $this->input->post('id_tipe');  
-      // $merek        = $this->input->post('merek');
-      // $no_plat      = $this->input->post('no_plat');
-      // $warna        = $this->input->post('warna');
-      // $tahun        = $this->input->post('tahun');
+      $id_tipe    = $this->input->post('id_tipe');   
       $status       = $this->input->post('status');
-      $harga        = $this->input->post('harga');
-      // $denda        = $this->input->post('denda');
-      // $ac           = $this->input->post('ac');
-      // $sopir        = $this->input->post('sopir');
-      // $mp3_player   = $this->input->post('mp3_player');
-      // $central_lock = $this->input->post('central_lock');
+      $harga        = $this->input->post('harga'); 
       $gambar    = $_FILES['gambar']['name'];
 
       if($gambar=''){}
@@ -78,21 +69,11 @@ class Data_mobil extends CI_Controller{
         }
       }
       $data = array(
-        'id_tipe'    => $id_tipe,
-        // 'merek'        => $merek,
-        // 'no_plat'      => $no_plat,
-        // 'tahun'        => $tahun,
-        // 'warna'        => $warna,
+        'id_tipe'    => $id_tipe, 
         'status'       => $status,
-        'harga'        => $harga,
-        // 'denda'        => $denda,
-        // 'ac'           => $ac,
-        // 'sopir'        => $sopir,
-        // 'mp3_player'   => $mp3_player,
-        // 'central_lock' => $central_lock,
+        'harga'        => $harga, 
         'gambar'       => $gambar,
-      );
-      // $this->db->query("INSERT INTO mobil (id_tipe, status, harga, gambar) values ()")
+      ); 
       $this->rental_model->insert_data($data, 'mobil');
       $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
       Data berhasil ditambahkan
@@ -122,18 +103,9 @@ class Data_mobil extends CI_Controller{
     }
     else{
       $id           = $this->input->post('id_mobil');
-      $id_tipe    = $this->input->post('id_tipe');
-      // $merek        = $this->input->post('merek');
-      // $no_plat      = $this->input->post('no_plat');
-      // $warna        = $this->input->post('warna');
-      // $tahun        = $this->input->post('tahun');
+      $id_tipe    = $this->input->post('id_tipe'); 
       $status       = $this->input->post('status');
-      $harga        = $this->input->post('harga');
-      // $denda        = $this->input->post('denda');
-      // $ac           = $this->input->post('ac');
-      // $sopir        = $this->input->post('sopir');
-      // $mp3_player   = $this->input->post('mp3_player');
-      // $central_lock = $this->input->post('central_lock');
+      $harga        = $this->input->post('harga'); 
       $gambar    = $_FILES['gambar']['name'];
 
       if($gambar){
@@ -151,18 +123,9 @@ class Data_mobil extends CI_Controller{
         }
       }
       $data = array(
-        'id_tipe'    => $id_tipe,
-        // 'merek'        => $merek,
-        // 'no_plat'      => $no_plat,
-        // 'tahun'        => $tahun,
-        // 'warna'        => $warna,
+        'id_tipe'    => $id_tipe, 
         'status'       => $status,
-        'harga'        => $harga,
-        // 'denda'        => $denda,
-        // 'ac'           => $ac,
-        // 'sopir'        => $sopir,
-        // 'mp3_player'   => $mp3_player,
-        // 'central_lock' => $central_lock,
+        'harga'        => $harga,  
       );
       $where = array('id_mobil' => $id);
 
@@ -198,13 +161,10 @@ class Data_mobil extends CI_Controller{
   }
 
   public function _rules(){
-    $this->form_validation->set_rules('id_tipe', 'Kode Tipe', 'required');
-    // $this->form_validation->set_rules('merek', 'Merek', 'required');
-    // $this->form_validation->set_rules('no_plat', 'Nomor Plat', 'required');
-    // $this->form_validation->set_rules('tahun', 'Tahun', 'required');
-    // $this->form_validation->set_rules('warna', 'Warna', 'required');
+    $this->form_validation->set_rules('id_tipe', 'Kode Tipe', 'required'); 
     $this->form_validation->set_rules('status', 'Status', 'required');
     $this->form_validation->set_rules('harga', 'Harga', 'required');
+    // $this->form_validation->set_rules('gambar', 'Gambar', 'required');
     // $this->form_validation->set_rules('denda', 'Denda', 'required');
     // $this->form_validation->set_rules('ac', 'AC', 'required');
     // $this->form_validation->set_rules('sopir', 'Sopir', 'required');

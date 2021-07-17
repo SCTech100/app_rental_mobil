@@ -1,7 +1,7 @@
 <div class="main-content">
   <section class="section">
     <div class="section-header">
-      <h1>Form Input Data Mobil</h1>
+      <h1>Form Input Data Forklift</h1>
     </div>
 
     <div class="card">
@@ -11,73 +11,15 @@
           <div class="row">
             <div class="col-md-6">
               <div class="form-group">
-                <label for="">Tipe Mobil</label>
-                <select name="kode_tipe" id="" class="form-control">
-                  <option value="">--Pilih Tipe Mobil--</option> 
+                <label for="">Tipe Forklift</label>
+                <select name="id_tipe" id="id_tipe" class="form-control">
+                  <option value="">--Pilih Tipe Forklift--</option> 
                   <?php foreach($tipe as $tp): ?>
                   <option value="<?= $tp->id_tipe ?>"><?= $tp->kode_tipe . ' - ' . $tp->nama_tipe ?></option>
                   <?php endforeach; ?>
                 </select>
-                <?= form_error('kode_tipe', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <!-- <div class="form-group">
-                <label for="">Merek</label>
-                <input type="text" name="merek" class="form-control">
-                <?= form_error('merek', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">Nomor Plat</label>
-                <input type="text" name="no_plat" class="form-control">
-                <?= form_error('no_plat', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">Warna</label>
-                <input type="text" name="warna" class="form-control">
-                <?= form_error('warna', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">AC</label>
-                <select name="ac" id="" class="form-control">
-                  <option value="">--Pilih--</option>
-                  <option value="1">Tersedia</option>
-                  <option value="0">Tidak Tersedia</option>
-                </select>
-                <?= form_error('ac', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">Sopir</label>
-                <select name="sopir" id="" class="form-control">
-                  <option value="">--Pilih--</option>
-                  <option value="1">Tersedia</option>
-                  <option value="0">Tidak Tersedia</option>
-                </select>
-                <?= form_error('sopir', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">MP3 Player</label>
-                <select name="mp3_player" id="" class="form-control">
-                  <option value="">--Pilih--</option>
-                  <option value="1">Tersedia</option>
-                  <option value="0">Tidak Tersedia</option>
-                </select>
-                <?= form_error('mp3_player', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">Central Lock</label>
-                <select name="central_lock" id="" class="form-control">
-                  <option value="">--Pilih--</option>
-                  <option value="1">Tersedia</option>
-                  <option value="0">Tidak Tersedia</option>
-                </select>
-                <?= form_error('central_lock', '<div class="text-small text-danger">', '</div>') ?>
-              </div> -->
+                <?= form_error('id_tipe', '<div class="text-small text-danger">', '</div>') ?>
+              </div> 
 
             </div>
             <div class="col-md-6">
@@ -86,19 +28,10 @@
                 <input type="number" name="harga" class="form-control">
                 <?= form_error('harga', '<div class="text-small text-danger">', '</div>') ?>
               </div>
-
-              <!-- <div class="form-group">
-                <label for="">Denda</label>
-                <input type="number" name="denda" class="form-control">
-                <?= form_error('denda', '<div class="text-small text-danger">', '</div>') ?>
-              </div>
-
-              <div class="form-group">
-                <label for="">Tahun</label>
-                <input type="text" name="tahun" class="form-control">
-                <?= form_error('tahun', '<div class="text-small text-danger">', '</div>') ?>
-              </div> -->
-
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
               <div class="form-group">
                 <label for="">Status</label>
                 <select name="status" id="" class="form-control">
@@ -108,16 +41,17 @@
                 </select>
                 <?= form_error('status', '<div class="text-small text-danger">', '</div>') ?>
               </div>
-              
-              <!-- <div class="form-group">
-                <label for="">Gambar</label>
-                <input type="file" name="gambar" class="form-control">
-              </div> -->
-
-              <button type="submit" class="btn btn-primary mt-4">Simpan</button>
-              <button type="reset" class="btn btn-success mt-4">Reset</button>
             </div>
-          </div>
+            <div class="col-md-6">  
+              <div class="form-group">
+                <label for="">Gambar</label>
+                <input type="file" accept="image/*" name="gambar" class="form-control">
+              </div> 
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4">Simpan</button>
+        <button type="reset" class="btn btn-success mt-4">Reset</button>
+            
         </form>
       </div>
     </div>

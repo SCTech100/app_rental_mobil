@@ -28,15 +28,12 @@
       <tr>
         <th>No</th>
         <th>Customer</th>
-        <th>Mobil</th>
-        <th>Tgl. Rental</th>
-        <th>Tgl. Kembali</th>
-        <th>Harga/Hari</th>
-        <th>Denda/Hari</th>
-        <th>Total Denda</th>
-        <th>Tgl. Dikembalikan</th>
-        <th>Status Pengembalian</th>
-        <th>Status Rental</th>
+        <th style="width: 30%">Mobil</th>
+        <th>Tanggal Rental</th>
+        <th>Waktu Rental</th>
+        <th>Lama Rental (Jam)</th>
+        <th>Harga/Jam</th>      
+        <th>Total Pembayaran</th>
       </tr>
 
       <?php 
@@ -44,6 +41,15 @@
       foreach($laporan as $tr): ?>
       <tr>
         <td><?= $no++; ?></td>
+        <td><?= $tr->nama; ?></td>
+        <td style="width: 30%"><?= $tr->kode_tipe . '-' . $tr->nama_tipe; ?></td>
+        <td><?= date('d/m/Y', strtotime($tr->tanggal_sewa)); ?></td>
+        <td><?= date('H:i',strtotime($tr->waktu_sewa)); ?></td>
+        <td><?= $tr->lama_sewa; ?></td> 
+        <td>Rp.<?= number_format($tr->harga, 0,',','.'); ?>,-</td>   
+        <td>Rp.<?= number_format($tr->totalpembayaran, 0,',','.'); ?>,-</td>   
+
+        <!-- <td><?= $no++; ?></td>
         <td><?= $tr->nama; ?></td>
         <td><?= $tr->merek; ?></td>
         <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
@@ -74,7 +80,7 @@
           }else{
             echo "Belum Selesai";
           }?>
-        </td>
+        </td> -->
       </tr>
 
       <?php endforeach; ?>

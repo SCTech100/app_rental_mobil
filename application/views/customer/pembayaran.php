@@ -12,17 +12,17 @@
             <tr>
               <th>Tipe Forklift</th>
               <td>:</td>
-              <td><?= $tr->merek; ?></td>
+              <td><?= $tr->kode_tipe . ' - ' . $tr->nama_tipe; ?></td>
+            </tr> 
+            <tr>
+              <th>Tanggal Sewa</th>
+              <td>:</td>
+              <td><?= date('d/m/Y', strtotime($tr->tanggal_sewa)); ?></td>
             </tr>
             <tr>
-              <th>Tanggal Rental</th>
+              <th>Waktu Sewa</th>
               <td>:</td>
-              <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
-            </tr>
-            <tr>
-              <th>Jam Rental</th>
-              <td>:</td>
-              <td><?= time('H/m', strtotime($tr->tgl_rental)); ?></td>
+              <td><?= date('H:i',strtotime($tr->waktu_sewa)); ?></td>
             </tr>
             <tr>
               <th>Lama Sewa (Jam)</th>
@@ -37,7 +37,7 @@
             <tr class="text-success">
               <th>Jumlah Pembayaran</th>
               <td>:</td>
-              <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga * $lama_sewa, 0, ',', '.'); ?>,-</button></td>
+              <td><button class="btn btn-sm btn-success">Rp.<?= number_format($tr->harga *  $tr->lama_sewa, 0, ',', '.'); ?>,-</button></td>
             </tr>
             <tr>
               <td></td>
@@ -100,7 +100,7 @@
           <div class="form-group">
             <label for="">Upload Bukti Pembayaran</label>
             <input type="hidden" name="id_rental" value="<?= $tr->id_rental ?>">
-            <input type="file" name="bukti_pembayaran" class="form-control">
+            <input type="file" accept="image/*" name="bukti_pembayaran" class="form-control">
           </div>
         </div>
         <div class="modal-footer">

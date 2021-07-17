@@ -32,9 +32,9 @@
               <div class="blog-thumb">
                 <img src="<?= base_url('assets/upload/') . $mb->gambar ?>" alt="">
               </div>
-              <div class="down-content">
-                <a href="offers.html"><h4><?= $mb->merek; ?></h4></a>
-                <span>Rp. <?= number_format($mb->harga,0,',','.'); ?>,-</span> <strong>per hari</strong>
+              <div class="down-content" style="padding: 0">
+                <a href="offers.html"><h4><?= $mb->kode_tipe . ' - ' . $mb->nama_tipe; ?></h4></a>
+                <span>Rp. <?= number_format($mb->harga,0,',','.'); ?>,-</span> <strong>per jam</strong>
 
                 <!-- <div class="row">
                   <?php if($mb->ac == '1'){ ?>

@@ -10,9 +10,12 @@
         <tr>
           <th>No</th>
           <th>Nama Customer</th>
-          <th>Merek Mobil</th>
-          <th>No. Plat</th>
+          <th>Forklift</th> 
+          <th>Tanggal Sewa</th>
+          <th>Waktu Sewa</th>
+          <th>Lama Sewa</th>
           <th>Harga Sewa</th>
+          <th>Total Sewa</th>
           <th>Action</th>
           <th>Batal</th>
         </tr>
@@ -23,9 +26,12 @@
         <tr>
           <td><?= $no++; ?></td>
           <td><?= $tr->nama; ?></td>
-          <td><?= $tr->merek; ?></td>
-          <td><?= $tr->no_plat; ?></td>
+          <td><?= $tr->kode_tipe . '-' . $tr->nama_tipe; ?></td> 
+          <td><?= date('d/m/Y', strtotime($tr->tanggal_sewa)); ?></td>
+          <td><?= date('H:i',strtotime($tr->waktu_sewa)); ?></td>
+          <td><?= $tr->lama_sewa; ?></td>
           <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
+          <td>Rp.<?= number_format($tr->harga * $tr->lama_sewa , 0, ',', '.'); ?>,-</td>
           <td>
             <?php if($tr->status_rental == "Selesai"){ ?>
               <button class="btn btn-sm btn-danger">Rental Selesai</button>

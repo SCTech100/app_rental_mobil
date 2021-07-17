@@ -39,7 +39,7 @@ class Laporan extends CI_Controller{
       $this->load->view('templates_admin/footer');
     }
     else{
-      $data['laporan'] = $this->db->query("SELECT * FROM transaksi tr, mobil mb, customer cs WHERE tr.id_mobil=mb.id_mobil AND tr.id_customer=cs.id_customer AND date(tgl_rental) >= '$dari' AND date(tgl_rental) <= '$sampai'")->result();
+      $data['laporan'] = $this->db->query("SELECT *, (tr.harga * tr.lama_sewa) as totalpembayaran FROM transaksi tr, mobil mb, tipe tp, customer cs WHERE tr.id_mobil=mb.id_mobil AND tp.id_tipe = mb.id_tipe AND tr.id_customer=cs.id_customer AND date(tanggal_sewa) >= '$dari' AND date(tanggal_sewa) <= '$sampai'")->result();
       // var_dump($data);
       // die;
       $this->load->view('templates_admin/header');
@@ -56,7 +56,7 @@ class Laporan extends CI_Controller{
     // die;
 
     $data['title'] = "Print Laporan Transaksi";
-    $data['laporan'] = $this->db->query("SELECT * FROM transaksi tr, mobil mb, customer cs WHERE tr.id_mobil=mb.id_mobil AND tr.id_customer=cs.id_customer AND date(tgl_rental) >= '$dari' AND date(tgl_rental) <= '$sampai'")->result();
+    $data['laporan'] = $this->db->query("SELECT *, (tr.harga * tr.lama_sewa) as totalpembayaran FROM transaksi tr, mobil mb, tipe tp, customer cs WHERE tr.id_mobil=mb.id_mobil AND tp.id_tipe = mb.id_tipe AND tr.id_customer=cs.id_customer AND date(tanggal_sewa) >= '$dari' AND date(tanggal_sewa) <= '$sampai'")->result();
 
     $this->load->view('templates_admin/header', $data);
     $this->load->view('admin/print_laporan', $data);

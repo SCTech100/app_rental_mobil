@@ -10,7 +10,11 @@
         <div class="form-group">
           <label for="">Harga Sewa/jam</label>
           <input type="hidden" name="id_mobil" value="<?= $dt->id_mobil; ?>">
-          <input type="text" name="harga" class="form-control" value="<?= $dt->harga; ?>" readonly>
+          <input type="hidden" name="harga" value="<?= $dt->harga; ?>">
+          
+          <!-- <input type="hidden" name="harga" value="<?= $dt->harga; ?>"> -->
+          <div><b>Rp.<?= number_format($dt->harga, 0, ',', '.'); ?>,-</b></div>
+          <!-- <input type="text" name="harga" class="form-control" value="<?= $dt->harga; ?>" readonly> -->
         </div>
         <!-- <div class="form-group">
           <label for="">denda/jam</label>
@@ -18,7 +22,7 @@
         </div> -->
         <div class="form-group">
           <label for="">Tanggal Sewa</label>
-          <input type="date" name="tanggal_sewa" class="form-control" style="width: 200px">
+          <input type="date" min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" name="tanggal_sewa" max class="form-control" style="width: 200px">
         </div>
         <div class="form-group">
           <label for="">Jam Sewa</label>

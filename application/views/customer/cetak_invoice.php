@@ -1,3 +1,4 @@
+<page size="A4">
 <table style="width: 40%;">
   <h2>Invoice Pembayaran Anda</h2>
   <?php foreach($transaksi as $tr): ?>
@@ -8,26 +9,31 @@
     </tr>
 
     <tr>
-      <td>Merek Mobil</td>
+      <td>Forklift</td>
       <td>:</td>
-      <td><?= $tr->merek; ?></td>
+      <td><?= $tr->kode_tipe . ' - ' . $tr->nama_tipe; ?></td>
     </tr>
     <tr>
-      <td>Tanggal Rental</td>
+      <td>Tanggal Sewa</td>
       <td>:</td>
-      <td><?= date('d/m/Y', strtotime($tr->tgl_rental)); ?></td>
+      <td><?= date('d/m/Y', strtotime($tr->tanggal_sewa)); ?></td>
     </tr>
     <tr>
-      <td>Tanggal Kembali</td>
+      <td>Waktu Sewa</td>
       <td>:</td>
-      <td><?= date('d/m/Y', strtotime($tr->tgl_kembali)); ?></td>
+      <td><?= date('H:i', strtotime($tr->waktu_sewa)); ?></td>
     </tr>
     <tr>
-      <td>Biaya Sewa Perhari</td>
+      <td>Harga Sewa Perjam</td>
       <td>:</td>
       <td>Rp.<?= number_format($tr->harga, 0, ',', '.'); ?>,-</td>
     </tr>
     <tr>
+      <td>Lama Sewa</td>
+      <td>:</td>
+      <td><?=$tr-> lama_sewa?></td>
+    </tr>
+    <!-- <tr>
       <?php 
         $x = strtotime($tr->tgl_kembali);
         $y = strtotime($tr->tgl_rental);
@@ -36,7 +42,7 @@
       <td>Jumlah Hari Sewa</td>
       <td>:</td>
       <td><?= $jmlHari; ?> Hari</td>
-    </tr>
+    </tr> -->
 
     <tr>
       <td>Status Pembayaran</td>
@@ -54,12 +60,12 @@
     <tr style="font-weight:bold; color:red;">
       <td>JUMLAH PEMBAYARAN</td>
       <td>:</td>
-      <td>Rp.<?= number_format($tr->harga * $jmlHari, 0, ',', '.'); ?>,-</td>
+      <td>Rp.<?= number_format($tr->harga * $tr->lama_sewa, 0, ',', '.'); ?>,-</td>
     </tr>
 
     <tr>
-      <td>Rekening Pembayaran</td>
-      <td>:</td>
+      <td style="vertical-align: top">Rekening Pembayaran</td>
+      <td style="vertical-align: top">:</td>
       <td>
         <ul>
           <li>Bank Mandiri 1212423344</li>
@@ -70,7 +76,7 @@
     </tr>
   <?php endforeach; ?>
 </table>
-
+      </page>
 <script>
   window.print();
 </script>
