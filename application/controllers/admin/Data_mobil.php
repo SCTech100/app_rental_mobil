@@ -140,7 +140,8 @@ class Data_mobil extends CI_Controller{
   }
 
   public function detail_mobil($id){
-    $data['detail'] = $this->rental_model->ambil_id_mobil($id);
+    $data['detail'] = $this->db->query("SELECT * FROM mobil mb, tipe tp WHERE mb.id_tipe = tp.id_tipe AND mb.id_mobil = $id")->result();
+    //$data['detail'] = $this->rental_model->ambil_id_mobil($id);
     $this->load->view('templates_admin/header');
     $this->load->view('templates_admin/sidebar');
     $this->load->view('admin/detail_mobil', $data);
