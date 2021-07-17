@@ -34,9 +34,10 @@
           <td>Rp.<?= number_format($tr->harga * $tr->lama_sewa , 0, ',', '.'); ?>,-</td>
           <td>
             <?php if($tr->status_rental == "Selesai"){ ?>
-              <button class="btn btn-sm btn-danger">Rental Selesai</button>
-            <?php }
-            else{ ?>
+              <button class="btn btn-sm btn-success">Rental Selesai</button>
+            <?php } else if($tr->status_rental == "Dibatalkan"){ ?>
+              <button class="btn btn-sm btn-danger">Rental Dibatalkan</button>
+            <?php } else{ ?>
               <a href="<?= base_url('customer/transaksi/pembayaran/'.$tr->id_rental); ?>" class="btn btn-sm btn-success">Cek Pembayaran</a>
             <?php } ?>
           </td>

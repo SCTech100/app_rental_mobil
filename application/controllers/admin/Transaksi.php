@@ -70,6 +70,19 @@ class Transaksi extends CI_Controller{
     $this->load->view('admin/transaksi_selesai', $data);
     $this->load->view('templates_admin/footer');
   }
+  public function transaksi_pembayaran_selesai($id){ 
+  
+    $where = array('id_rental' => $id);
+    $data = array('status_pembayaran' => 1);
+    $this->rental_model->update_data('transaksi', $data, $where); 
+
+    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    Pembayaran telah dikonfirmasi
+    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+      <span aria-hidden="true">&times;</span>
+    </button></div>');
+    redirect('admin/transaksi');
+  }
 
   public function transaksi_selesai_aksi(){
     $id                  = $this->input->post('id_rental');
@@ -116,8 +129,13 @@ class Transaksi extends CI_Controller{
     // die;
     $data2 = array('status' => '1');
 
+    $data3 = array(
+      'status_pembayaran' => 2
+    );
+
     $this->rental_model->update_data('mobil', $data2, $where2);
-    $this->rental_model->delete_data($where, 'transaksi');
+    $this->rental_model->update_data('transaksi', $data3, $where); 
+    // $this->rental_model->delete_data($where, 'transaksi');
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
     Transaksi berhasil dibatalkan
     <button type="button" class="close" data-dismiss="alert" aria-label="close">
