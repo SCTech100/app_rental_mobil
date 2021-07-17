@@ -102,5 +102,4 @@ class Transaksi extends CI_Controller{
     redirect('customer/transaksi');
   }
 
-
 }

@@ -23,14 +23,17 @@
         <div class="form-group">
           <label for="">Tanggal Sewa</label>
           <input type="date" min="<?php echo date('Y-m-d');?>" value="<?php echo date('Y-m-d');?>" name="tanggal_sewa" max class="form-control" style="width: 200px">
+            <?= form_error('tanggal_sewa', '<div class="text-small text-danger">', '</div>') ?>
         </div>
         <div class="form-group">
           <label for="">Jam Sewa</label>
           <input type="time" name="waktu_sewa" class="form-control" style="width: 200px" >
+            <?= form_error('waktu_sewa', '<div class="text-small text-danger">', '</div>') ?>
         </div>
         <div class="form-group">
           <label for="">Lama Sewa / Jam</label>
-          <input type="number" name="lama_sewa" class="form-control" style="width: 200px" min="1" max="90" >
+          <input type="number" name="lama_sewa" class="form-control" style="width: 200px" min="1" >
+            <?= form_error('lama_sewa', '<div class="text-small text-danger">', '</div>') ?>
         </div>
         <!-- <div class="form-group">
           <label for="">Tanggal Kembali</label>

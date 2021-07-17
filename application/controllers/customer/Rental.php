@@ -33,6 +33,14 @@ class Rental extends CI_Controller{
   }
 
   public function tambah_rental_aksi(){
+    $this->_rules();
+
+    if($this->form_validation->run() == FALSE){
+      $id_mobil        = $this->input->post('id_mobil');
+      $this->tambah_rental($id_mobil);
+    }
+    else{
+
     $id_customer     = $this->session->userdata('id_customer');
     $id_mobil        = $this->input->post('id_mobil');
     $tanggal_sewa      = $this->input->post('tanggal_sewa');
@@ -68,6 +76,14 @@ class Rental extends CI_Controller{
         <span aria-hidden="true">&times;</span>
       </button></div>');
       redirect('customer/data_mobil');
+    }
+  }
+
+
+  public function _rules(){
+    $this->form_validation->set_rules('tanggal_sewa', 'Tanggal Sewa', 'required');
+    $this->form_validation->set_rules('waktu_sewa', 'Waktu Sewa', 'required');
+    $this->form_validation->set_rules('lama_sewa', 'Lama Sewa', 'required');
   }
 
 
