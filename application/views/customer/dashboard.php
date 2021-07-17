@@ -135,7 +135,7 @@
             </div>
             <div class="down-content">
               <strong>Potongan</strong> <span> 100.000 </span> <strong>diatas 5 jam penyewaan</strong>
-              <a href="offers.html"><h4>Promo ini berlaku untuk penyewaan Forklift 7 Ton</h4></a>
+              <a href="#"><h4>Promo ini berlaku untuk penyewaan Forklift 7 Ton</h4></a>
               <div class="post-options">
                 <div class="row">
                   <div class="col-lg-12">
@@ -154,7 +154,7 @@
             </div>
             <div class="down-content">
               <strong>Gratis</strong> <span> 1 Jam </span> <strong>diatas 4 jam penyewaan</strong>
-              <a href="offers.html"><h4>Promo ini Berlaku untuk Penyewaan Forklift 10 Ton</h4></a>
+              <a href="#"><h4>Promo ini Berlaku untuk Penyewaan Forklift 10 Ton</h4></a>
               <div class="post-options">
                 <div class="row">
                   <div class="col-lg-12">
@@ -173,7 +173,7 @@
             </div>
             <div class="down-content">
               <strong>Gratis</strong> <span> 1 Jam </span> <strong>Setiap 20 Jam Penyewaan</strong>
-              <a href="offers.html"><h4>Promo ini Berlaku untuk penyewaan Forklift Diatas 3 Ton </h4></a>
+              <a href="#"><h4>Promo ini Berlaku untuk penyewaan Forklift Diatas 3 Ton </h4></a>
               <div class="post-options">
                 <div class="row">
                   <div class="col-lg-12">
