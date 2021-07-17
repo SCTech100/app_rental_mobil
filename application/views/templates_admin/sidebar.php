@@ -73,14 +73,14 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown"><a href="#" class="nav-link nav-link-lg nav-link-user">
-            <div class="d-sm-none d-lg-inline-block">Hi, <strong><?= $this->session->userdata('nama'); ?></strong></div></a>
+            <div class="d-sm-none d-lg-inline-block">Hi, <strong><?=  ' Admin' ?></strong></div></a>
           </li>
         </ul>
       </nav>
       <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="<?= base_url('admin/dashboard'); ?>">APP RENTAL MOBIL</a>
+            <a href="<?= base_url('admin/dashboard'); ?>">CV. Alie Mitra Utama</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">RM</a>

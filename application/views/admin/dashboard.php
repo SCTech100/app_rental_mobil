@@ -12,7 +12,7 @@
           </div>
           <div class="card-wrap">
             <div class="card-header">
-              <h4>Data Mobil</h4>
+              <h4>Data Forklift</h4>
             </div>
             <div class="card-body">
               <?= $mobil; ?>
