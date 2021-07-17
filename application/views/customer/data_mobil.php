@@ -33,8 +33,8 @@
                 <img src="<?= base_url('assets/upload/') . $mb->gambar ?>" alt="">
               </div>
               <div class="down-content" style="padding: 0">
-                <a href="offers.html"><h4><?= $mb->kode_tipe . ' - ' . $mb->nama_tipe; ?></h4></a>
-                <span>Rp. <?= number_format($mb->harga,0,',','.'); ?>,-</span> <strong>per jam</strong>
+                <a href="offers.html"><h4 style="text-align: center;"><?= $mb->kode_tipe . ' - ' . $mb->nama_tipe; ?></h4></a>
+                <!-- <span>Rp. <?= number_format($mb->harga,0,',','.'); ?>,-</span> <strong>per jam</strong> -->
 
                 <!-- <div class="row">
                   <?php if($mb->ac == '1'){ ?>
@@ -69,17 +69,17 @@
                 <div class="post-options">
                   <div class="row">
                     <div class="col-lg-12">
-                      <ul class="post-tags">
-                        <li><i class="fa fa-bullseye"></i></li>
+                      <ul class="post-tags" style="text-align: center;">
+                        <!-- <li><i class="fa fa-bullseye"></i></li> -->
                         <?php 
                         if($mb->status == "1"){ ?>
-                          <a href="<?= base_url('customer/rental/tambah_rental/'.$mb->id_mobil) ?>"> Rental</a></li>
+                          <a style="text-align: center;color: gray;" href="<?= base_url('customer/data_mobil/detail_mobil/'.$mb->id_mobil) ?>"> Rental</a></li>
                         <?php }
                         else{ ?>
-                          <a href="#" style="color: black;"> Tidak Tersedia</a></li>
+                          <a style="text-align: center;color: gray;" href="<?= base_url('customer/data_mobil/detail_mobil/'.$mb->id_mobil) ?>" style="color: black;"> Tidak Tersedia</a></li>
                         <?php } ?>
                         
-                        <li><a href="<?= base_url('customer/data_mobil/detail_mobil/'.$mb->id_mobil) ?>"> | Detail</a></li>
+                        <!-- <li><a href="<?= base_url('customer/data_mobil/detail_mobil/'.$mb->id_mobil) ?>"> | Detail</a></li> -->
                       </ul>
                     </div>
                   </div>
