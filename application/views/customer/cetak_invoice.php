@@ -76,6 +76,31 @@
     </tr>
   <?php endforeach; ?>
 </table>
+
+<br>
+<table class="" style="width: 100%">
+    <tr>  
+      <td style="width: 80%">
+      </td>
+      <td style="width: 20%">
+         <?= date('d/m/Y'); ?>
+      </td>
+    </tr>
+    <tr style="height:100px;">  
+      <td style="width: 80%">
+      </td>
+      <td style="width: 20%">
+        
+      </td>
+    </tr>
+    <tr style="height:100px;">  
+      <td style="width: 80%">
+      </td>
+      <td style="width: 20%">
+        Admin
+      </td>
+    </tr>
+</table>
       </page>
 <script>
   window.print();
